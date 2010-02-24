@@ -5,6 +5,7 @@ gem 'rails',     '2.3.5'
 gem 'clearance', '0.8.7'
 gem 'formtastic'
 gem 'haml'
+gem 'paperclip'
 
 only :test, :cucumber do
   gem 'factory_girl'

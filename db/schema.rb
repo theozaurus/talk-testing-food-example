@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100224202042) do
+ActiveRecord::Schema.define(:version => 20100224204525) do
+
+  create_table "foods", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_update_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"

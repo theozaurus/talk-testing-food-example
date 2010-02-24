@@ -12,6 +12,7 @@
         %ul
           - if signed_in?
             %li= link_to "Sign out", sign_out_path
+            %li= link_to "New food", new_food_path
           - else
             %li= link_to "Sign up", sign_up_path
             %li= link_to "Sign in", sign_in_path
