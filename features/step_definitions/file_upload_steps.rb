@@ -9,7 +9,12 @@ When /^I attach "([^\"]*)" image to the "([^\"]*)" file field$/ do |filename, fi
 end
 
 Given /^the image "([^\"]*)" has been uploaded$/ do |image|
-  Given %{I have signed in with "theo@jivatechnology.com/foo"}
+  Given %{I am signed up and confirmed as "foo@bar.com/password"}
+  Given %{the image "#{image}" has been uploaded by "foo@bar.com"}
+end
+
+Given /^the image "([^\"]*)" has been uploaded by "([^\"]*)"$/ do |image,user|
+  When %{I sign in as "#{user}/password"}
   When %{I go to the new food page}
   When %{I attach "#{image}" image to the "food_picture" file field}
   When %{I press "Upload"}
