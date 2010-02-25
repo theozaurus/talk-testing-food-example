@@ -1,5 +1,7 @@
 class FoodsController < ApplicationController
   
+  before_filter :authenticate
+  
   def new
     @food = Food.new
     
@@ -14,7 +16,7 @@ class FoodsController < ApplicationController
     
     respond_to do |format|
       if @food.save
-        flash[:notice] = 'Yum'
+        flash[:notice] = 'Thanks!'
         format.html { redirect_to root_path }
       else
         format.html { render :action => "new" }

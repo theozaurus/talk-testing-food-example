@@ -17,4 +17,5 @@ only :test, :cucumber do
   gem 'webrat'
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'pickle'
 end

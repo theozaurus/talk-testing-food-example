@@ -1,8 +1,8 @@
+$:.unshift File.dirname(File.dirname(__FILE__))
 require 'test_helper'
 
 class HomeControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+
+  should_route :get, "/",   :controller => "home", :action => :index
+
 end

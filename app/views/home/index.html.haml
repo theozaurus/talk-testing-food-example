@@ -1,3 +1,6 @@
 %ul
   - @foods.each do |f|
-    %li= image_tag f.picture.url
+    %li
+      %div
+        = image_tag f.picture.url
+        %span.author= f.user.email
